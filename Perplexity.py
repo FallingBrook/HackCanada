@@ -41,7 +41,7 @@ DOCTOR_SYSTEM_PROMPT = """You are an AI medical assistant providing general heal
 5. Dont include citations
 6. If a prescription is applicable end your message with: "P: (medicine name)" Only suggest one medicine
 7. If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
-8. Before you write the prescription or doctors note write: "***"
+8. Before you write the prescription or doctors note write: "***". Have no space between prescription and medicine
 
 Medical conversation history:
 {history}
@@ -78,25 +78,25 @@ def save_interaction(file_path, user_input, response):
 def checkCreateFile(text):
     medicine = ""
     injury = ""
-    a = text.split("***")
-    if(len(a) == 1):
+    print(text)
+    if(len(text) <= 1):
         return None
-    res = a[1].splitlines(False)
+    res = text.splitlines(False)
     print(res)
 
-    if len(res) == 3:
-        res[1] = res[1][3:]
-        medicine = res[1]
+    if len(res) == 2:
+        res[0] = res[0][3:]
+        medicine = res[0]
 
-        res[2] = res[2][3:]
-        injury = res[2]
-    elif(len(res) == 2):
-        if(res[1][:2] == "P:"):
-            res[1] = res[1][3:]
-            medicine = res[1]
+        res[1] = res[1][3:]
+        injury = res[1]
+    elif(len(res) == 1):
+        if(res[0][:2] == "P:"):
+            res[0] = res[0][3:]
+            medicine = res[0]
         elif(res[1][:2] == "N:"):
-            res[2] = res[2][3:]
-            injury = res[2]
+            res[1] = res[1][3:]
+            injury = res[1]
 
 
 
@@ -173,10 +173,11 @@ def GetAiDoctorResp(question):
     }, headers=headers)
 
     if response.status_code == 200:
-        doctor_response = response.json()["choices"][0]["message"]["content"]
-        save_interaction(DOCTOR_HISTORY_FILE, question, doctor_response)
-        checkCreateFile(doctor_response)
-        return doctor_response
+        text = response.json()["choices"][0]["message"]["content"]
+        save_interaction(DOCTOR_HISTORY_FILE, question, text)
+        doctor_response = text.split("***")
+        checkCreateFile(doctor_response[1])
+        return doctor_response[0]
     else:
         print(f"Doctor Error: {response.status_code}")
         return None
