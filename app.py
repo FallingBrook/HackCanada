@@ -12,7 +12,7 @@ def process_medi():
     data = request.json
     user_text = data.get("text", "")
     print("Processing medi AI")
-    user_text = Perplexity.GetPerplexityResponse(user_text, "Respond as a doctor. Make suggestions based on the symptoms given. Respond in under 100 words no matter what.")
+    user_text = Perplexity.GetAiDoctorResp(user_text)
 
     return jsonify({"result": user_text})
 
@@ -26,7 +26,7 @@ def process_poopy():
 
 
 
-    user_message = Perplexity.GetPerplexityResponse(user_message, "Be super rude and answer with 1 or 2 words max")
+    user_message = Perplexity.GetAiTherapistResp(user_message)
 
     return jsonify({"response": user_message})
 
