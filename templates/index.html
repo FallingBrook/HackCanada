@@ -26,14 +26,28 @@
             <h2>Medi AI</h2>
             <textarea id="demo-message" placeholder="Ask Medi AI..."></textarea>
             <p></p>
-            <a class="button" onclick="sendToPython()">Submit</a>
-            <p id="response"></p>
+            <a href="#" class="button primary fit" onclick="sendToMedi()">Submit</a>
+            <p></p>
+            <pre>
+                <p id="response"></p>
+            </pre>
+
+
+            <h2>Poopy AI</h2>
+            <textarea id="demo-message2" placeholder="Ask Poopy AI..."></textarea>
+            <p></p>
+            <a href="#" class="button primary fit" onclick="sendToPoopy()">Submit</a>
+            <p></p>
+            <pre>
+                <p id="response2"></p>
+            </pre>
+
         </section>
         <script>
-            async function sendToPython() {
+            async function sendToMedi() {
                 const inputText = document.getElementById("demo-message").value;
 
-                const response = await fetch("/process", {
+                const response = await fetch("/process_medi", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ text: inputText })
@@ -41,6 +55,19 @@
 
                 const data = await response.json();
                 document.getElementById("response").innerText = data.result;
+            }
+
+            async function sendToPoopy() {
+                const inputText = document.getElementById("demo-message2").value;
+
+                const response = await fetch("/process_poopy", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: inputText })
+                });
+
+                const data = await response.json();
+                document.getElementById("response2").innerText = data.result;
             }
         </script>
 
