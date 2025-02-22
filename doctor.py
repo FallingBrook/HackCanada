@@ -1,34 +1,31 @@
-from flask import Flask, request, jsonify, render_template
-import Perplexity
+from flask import Flask, request, render_template
+import os
+
 app = Flask(__name__)
+UPLOAD_FOLDER = "static/uploads"
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Create folder if it doesn't exist
+
 
 @app.route('/')
 def home():
-    return render_template('doctor.html')  # Serve the HTML
- # Serve the HTML
-
-@app.route('/process_medi', methods=['POST'])
-def process_medi():
-    data = request.json
-    user_text = data.get("text", "")
-    print("Processing medi AI")
-    user_text = Perplexity.GetAiDoctorResp(user_text)
-
-    return jsonify({"result": user_text})
+    return render_template("index.html")  # Ensure your HTML file is in "templates/"
 
 
-@app.route('/process_poopy', methods=['POST'])
-def process_poopy():
-    print("Processing poopy AI")
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return "No file uploaded", 400
 
-    data = request.json
-    user_message = data.get("message", "")
+    file = request.files['file']
 
+    if file.filename == '':
+        return "No selected file", 400
 
+    filepath = os.path.join(UPLOAD_FOLDER, file.filename)
+    file.save(filepath)  # Save the image
 
-    user_message = Perplexity.GetAiTherapistResp(user_message)
+    return f"File uploaded successfully! <br><img src='/{filepath}' width='300px'>"
 
-    return jsonify({"response": user_message})
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5001)
