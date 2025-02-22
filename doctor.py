@@ -8,7 +8,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Create folder if it doesn't exist
 
 @app.route('/')
 def home():
-    return render_template("index.html")  # Ensure your HTML file is in "templates/"
+    return render_template("doctor.html")  # Ensure your HTML file is in "templates/"
 
 
 @app.route('/upload', methods=['POST'])
