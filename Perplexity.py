@@ -82,6 +82,8 @@ def checkCreateFile(text):
     if(len(text) <= 1):
         return None
     res = text.splitlines(False)
+    res.remove("")
+
     print(res)
 
     if len(res) == 2:

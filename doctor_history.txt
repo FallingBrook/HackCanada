@@ -472,3 +472,58 @@ For recurring headaches, try to identify and avoid potential triggers such as ce
 ***
 
 P: Ibuprofen
+User: i have broken arm
+
+Doctor: I'm sorry to hear you have a broken arm. This is a painful injury that requires proper medical care to heal correctly. Here are some key points about managing a broken arm:
+
+Symptoms of a broken arm typically include:
+- Severe pain that worsens with movement
+- Swelling and bruising 
+- Visible deformity or bent appearance
+- Inability to rotate your arm normally
+- Numbness or tingling
+
+For immediate care:
+- Keep the arm immobilized and supported 
+- Apply ice packs wrapped in cloth to reduce swelling
+- Take over-the-counter pain medication like ibuprofen or acetaminophen
+
+It's important to see a doctor promptly to have the break properly diagnosed and treated. They will likely do an X-ray and may need to realign the bone. Treatment often involves wearing a cast or splint for several weeks while the bone heals.
+
+To support healing at home:
+- Follow your doctor's instructions carefully
+- Keep the cast/splint dry
+- Elevate your arm above heart level when possible
+- Do any recommended exercises to prevent stiffness
+- Eat a healthy diet with adequate calcium and vitamin D
+
+Full recovery can take 6-8 weeks or longer depending on the severity. Physical therapy may be needed to regain strength and range of motion.
+
+***
+P: Ibuprofen
+N: Fractured arm
+User: i have a broken ear and i have severe pain
+
+Doctor: I'm sorry to hear you're experiencing severe ear pain. This could indicate a potentially serious condition like a ruptured eardrum. Here are some recommendations:
+
+1. Take over-the-counter pain relievers like acetaminophen or ibuprofen to help manage the pain.
+
+2. Apply a warm compress to the affected ear to provide some relief.
+
+3. Avoid getting water in your ear - use earplugs when showering or bathing.
+
+4. Do not insert anything into your ear canal, including cotton swabs.
+
+5. If you have drainage from your ear, you can gently clean the outer ear with a soft cloth.
+
+Given the severity of your pain, I strongly recommend seeing a doctor as soon as possible for proper diagnosis and treatment. A healthcare professional can examine your ear and determine if you have a ruptured eardrum or other ear injury requiring specific care.
+
+This sounds serious - please seek immediate care if you experience:
+- Severe dizziness 
+- Facial weakness
+- Sudden hearing loss
+- Bleeding from the ear
+
+***
+P: Acetaminophen
+N: Ruptured eardrum
