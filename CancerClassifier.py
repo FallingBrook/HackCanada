@@ -35,13 +35,13 @@ def checkForCancer(img_path):
     processed_img = preprocess_image(img_path)
     prediction, confidence = predict_cancer(model, processed_img, class_names)
 
-    # Display results
-    print(f'Prediction: {prediction}')
-    print(f'Confidence: {confidence:.2%}')
+    # # Show the image
+    # img = image.load_img(img_path)
+    # plt.imshow(img)
+    # plt.title(f'{prediction} ({confidence:.2%})')
+    # plt.axis('off')
+    # plt.show()
 
-    # Show the image
-    img = image.load_img(img_path)
-    plt.imshow(img)
-    plt.title(f'{prediction} ({confidence:.2%})')
-    plt.axis('off')
-    plt.show()
+    print(f'Prediction: {prediction}' + f'  Confidence: {confidence:.2%}')
+    # Display results
+    return f'Prediction: {prediction}' + f'  Confidence: {confidence:.2%}'

@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import os
+import CancerClassifier
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "static/uploads"
@@ -20,12 +21,13 @@ def upload_file():
 
     if file.filename == '':
         return "No selected file", 400
-    file.filename = "image"
+
     filepath = os.path.join(UPLOAD_FOLDER, file.filename)
     file.save(filepath)  # Save the image
-    os.rename(filepath, "static/uploads/image.jpg")
 
-    return f"File uploaded successfully! <br><img src='/{filepath}' width='300px'>"
+    print(CancerClassifier.checkForCancer(filepath))
+    return CancerClassifier.checkForCancer(filepath)
+    # return f"File uploaded successfully! <br><img src='/{filepath}' width='300px'>"
 
 
 if __name__ == '__main__':

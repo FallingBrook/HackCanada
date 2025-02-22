@@ -1,1 +1,3 @@
-from tensorflow.python.keras.layers import Dense
+import CancerClassifier
+
+CancerClassifier.checkForCancer("static/uploads/image.jpg")
