@@ -19,12 +19,16 @@ def process_medi():
 
 @app.route('/process_poopy', methods=['POST'])
 def process_poopy():
-    data = request.json
-    user_text2 = data.get("text", "")
     print("Processing poopy AI")
-    user_text2 = Perplexity.GetPerplexityResponse(user_text2, "Be super rude and answer with 1 or 2 words max")
 
-    return jsonify({"result": user_text2})
+    data = request.json
+    user_message = data.get("message", "")
+
+
+
+    user_message = Perplexity.GetPerplexityResponse(user_message, "Be super rude and answer with 1 or 2 words max")
+
+    return jsonify({"response": user_message})
 
 if __name__ == '__main__':
     app.run(debug=True)
