@@ -347,3 +347,128 @@ Remember to take it easy and allow your body time to heal. Most arm fractures he
 
 P: Ibuprofen
 N: Broken arm
+User: My hand is broken
+Doctor: A broken hand is a serious injury that requires proper medical attention and care. Here are the key points to understand about a broken hand:
+
+Symptoms of a broken hand typically include:
+
+- Severe pain that worsens when gripping or moving the hand
+- Swelling and tenderness 
+- Bruising or discoloration
+- Obvious deformity, such as a crooked finger
+- Stiffness or inability to move fingers/thumb
+- Numbness in the hand or fingers
+
+To manage pain and swelling while awaiting medical care:
+
+- Apply ice wrapped in a towel for 15-20 minutes at a time
+- Elevate the hand above heart level 
+- Take over-the-counter pain medication like ibuprofen
+
+It's important to have a broken hand properly evaluated and treated by a medical professional. An x-ray will be needed to diagnose the fracture. Treatment usually involves immobilizing the hand in a cast or splint for several weeks while the bones heal. More severe fractures may require surgery.
+
+To support healing:
+
+- Follow all care instructions carefully
+- Eat a nutritious diet rich in calcium and vitamin D
+- Avoid smoking, which can impair bone healing
+- Be patient - full recovery typically takes 6-8 weeks
+
+While healing, you may need to modify activities and may benefit from occupational therapy to regain hand strength and function.
+
+This injury requires proper medical care, so please see a doctor promptly for evaluation and treatment of your broken hand.
+
+P: Ibuprofen
+
+N: Hand fracture
+User: my hand broken
+Doctor: Based on the information provided, it sounds like you may have a broken hand. Common symptoms of a broken hand include:
+
+- Severe pain that worsens when moving or gripping
+- Swelling 
+- Tenderness
+- Bruising or discoloration
+- Obvious deformity or crooked finger
+- Stiffness or inability to move fingers/thumb
+- Numbness in the hand or fingers
+
+It's important to have a potentially broken hand evaluated by a medical professional as soon as possible. They can properly diagnose the injury through a physical exam and imaging tests like X-rays. Proper treatment is crucial to ensure the bones heal correctly.
+
+In the meantime, you can:
+
+- Apply ice to reduce swelling and pain
+- Elevate the hand above heart level
+- Avoid moving or using the injured hand
+- Take over-the-counter pain medication if needed
+
+Treatment typically involves immobilizing the hand with a splint or cast for several weeks while the bones heal. More severe fractures may require surgery to realign and stabilize the bones.
+
+***
+
+P: Acetaminophen
+
+N: Hand fracture
+User: my hand broken
+Doctor: Based on your description, it sounds like you may have a broken hand. Here are some key points to keep in mind:
+
+Symptoms of a broken hand typically include:
+- Severe pain that worsens with movement 
+- Swelling and bruising
+- Tenderness to touch
+- Difficulty moving fingers or thumb
+- Visible deformity or misalignment
+
+To care for a potentially broken hand:
+- Avoid moving or using the injured hand
+- Apply ice packs for 15-20 minutes at a time to reduce swelling
+- Elevate the hand above heart level when possible
+- Take over-the-counter pain medication like acetaminophen if needed
+
+It's important to have a suspected broken hand evaluated by a doctor as soon as possible. They can perform an x-ray to confirm the diagnosis and determine appropriate treatment. Most broken hands are treated with a cast or splint for several weeks to immobilize the area while it heals.
+
+For severe pain or if you're unable to move your fingers at all, seek immediate medical attention as this could indicate a more serious fracture requiring urgent care.
+
+***
+
+P: Acetaminophen
+
+N: Hand fracture
+User: Broken arm
+Doctor: A broken arm occurs when one or more bones in the arm fracture due to trauma like a fall or impact. Common symptoms include severe pain, swelling, bruising, visible deformity, and difficulty moving the arm. 
+
+For initial care:
+
+1. Immobilize the arm using a makeshift sling or splint to prevent further injury
+2. Apply ice packs wrapped in a towel for 15-20 minutes at a time to reduce swelling 
+3. Take over-the-counter pain medication like acetaminophen or ibuprofen as needed
+
+It's important to have a suspected broken arm evaluated by a doctor promptly. They will perform an x-ray to confirm the diagnosis and determine appropriate treatment. Most broken arms are treated with a cast or splint for 6-8 weeks to immobilize the area while it heals. Physical therapy may be recommended afterwards to regain strength and range of motion.
+
+For severe pain, visible bone, numbness, or if you're unable to move your fingers at all, seek immediate medical attention as this could indicate a more serious fracture requiring urgent care.
+
+***
+
+P: Ibuprofen
+N: Arm fracture
+User: my head hurts
+Doctor: Headaches are a common ailment that can have various causes and manifestations. Based on your statement that your head hurts, here are some general recommendations:
+
+1. Rest in a quiet, dark room to reduce sensory stimulation.
+
+2. Apply a cold or warm compress to your head or neck.
+
+3. Stay hydrated by drinking plenty of water.
+
+4. Practice relaxation techniques like deep breathing or gentle stretching.
+
+5. Massage your temples or neck to relieve tension.
+
+For most headaches, over-the-counter pain relievers can be effective. Ibuprofen or acetaminophen are commonly used options. 
+
+If your headache is severe, persistent, or accompanied by other symptoms like fever, confusion, or neck stiffness, it's advisable to consult a healthcare professional.
+
+For recurring headaches, try to identify and avoid potential triggers such as certain foods, stress, or lack of sleep. Keeping a headache diary can help track patterns and potential causes.
+
+***
+
+P: Ibuprofen

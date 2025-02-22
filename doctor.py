@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')  # Serve the HTML
+    return render_template('doctor.html')  # Serve the HTML
  # Serve the HTML
 
 @app.route('/process_medi', methods=['POST'])
@@ -31,4 +31,4 @@ def process_poopy():
     return jsonify({"response": user_message})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=5001)
