@@ -25,8 +25,9 @@ def GetPerplexityResponse(question, parameter):
 
     if response.status_code == 200:
         answer = response.json()["choices"][0]["message"]["content"]
-        print(answer)
+        return answer
     else:
         print(f"Error: {response.status_code}", response.text)
+        return None
 
 GetPerplexityResponse("3 names for dogs", "HI")
