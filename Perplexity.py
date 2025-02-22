@@ -15,7 +15,10 @@ def GetPerplexityResponse(question, parameter):
         "model": "sonar-pro",  # Choose a model (e.g., pplx-70b-chat)
         "messages": [
             {"role": "user", "content": question}
-        ]
+        ],
+        "temperature": 0.7,
+        "max_tokens": 150,
+        "return_related_questions": False
     }
 
     response = requests.post(url, json=data, headers=headers)
