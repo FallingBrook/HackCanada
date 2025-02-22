@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7b362d8-aca7-4305-8f70-bff79faa1a2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HackCanada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HackCanada.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perplexity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Perplexity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/uploads/IMG_4811 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doctor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

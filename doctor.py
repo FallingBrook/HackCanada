@@ -20,9 +20,10 @@ def upload_file():
 
     if file.filename == '':
         return "No selected file", 400
-
+    file.filename = "image"
     filepath = os.path.join(UPLOAD_FOLDER, file.filename)
     file.save(filepath)  # Save the image
+    os.rename(filepath, "static/uploads/image.jpg")
 
     return f"File uploaded successfully! <br><img src='/{filepath}' width='300px'>"
 
