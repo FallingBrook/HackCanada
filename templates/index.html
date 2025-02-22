@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Generic - Stellar by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <title>Simple Input to Python</title>
+</head>
+<body>
+    <h2>Enter Some Text</h2>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button onclick="sendToPython()">Submit</button>
+    <p id="response"></p>
+
+    <script>
+        async function sendToPython() {
+            const inputText = document.getElementById("userInput").value;
+
+            const response = await fetch("/process", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: inputText })
+            });
+
+            const data = await response.json();
+            document.getElementById("response").innerText = data.result;
+        }
+    </script>
+</body>
+</html>

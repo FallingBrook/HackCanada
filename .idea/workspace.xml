@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b362d8-aca7-4305-8f70-bff79faa1a2d" name="Changes" comment="" />
+    <list default="true" id="f7b362d8-aca7-4305-8f70-bff79faa1a2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/HackCanada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HackCanada.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,7 +37,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Python.Perplexity.executor": "Run",
-    "Python.k.executor": "Debug",
+    "Python.k.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -42,7 +46,13 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.k">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\devda\OneDrive\Documents\GitHub\HackCanada\templates" />
+      <recent name="C:\Users\devda\OneDrive\Documents\GitHub\HackCanada" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Perplexity">
     <configuration name="Perplexity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="HackCanada" />
       <option name="ENV_FILES" value="" />
@@ -114,8 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.k" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.k" />
       </list>
     </recent_temporary>
   </component>
@@ -136,5 +146,15 @@
       <updated>1740204246619</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CancerRec.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
