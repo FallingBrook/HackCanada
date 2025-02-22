@@ -31,9 +31,11 @@ def createPrescriptionFile(file_path, prescription, instructions):
     curFileTemplate = curFileTemplate.replace("{instructions}", instructions)
     with open(file_path, "a") as f:
         f.write(curFileTemplate)
+        f.flush()
 
 def createDocNoteFile(file_path, content, recommendations):
     curFileTemplate = NOTE_TEMPLATE.replace("{content}", content)
     curFileTemplate = curFileTemplate.replace("{recommendations}", recommendations)
     with open(file_path, "a") as f:
         f.write(curFileTemplate)
+        f.flush()

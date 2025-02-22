@@ -1,3 +1,5 @@
+from cgi import print_environ_usage
+
 import requests
 import os
 import CreateDoctorFile
@@ -37,8 +39,9 @@ DOCTOR_SYSTEM_PROMPT = """You are an AI medical assistant providing general heal
 3. Provide evidence-based information
 4. Flag emergencies: "This sounds serious - please seek immediate care"
 5. Dont include citations
-6. If a prescription is applicable end your message with: "P: (medecine name)"
-7. If a doctors note is applicable end your message with: N: (injury)
+6. If a prescription is applicable end your message with: "P: (medicine name)" Only suggest one medicine
+7. If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
+8. Before you write the prescription or doctors note write: "***"
 
 Medical conversation history:
 {history}
@@ -71,6 +74,41 @@ def save_interaction(file_path, user_input, response):
         f.write(f"User: {user_input}\n")
         role = "Therapist" if "therapy" in file_path else "Doctor"
         f.write(f"{role}: {response}\n")
+
+def checkCreateFile(text):
+    medicine = ""
+    injury = ""
+    a = text.split("***")
+    if(len(a) == 1):
+        return None
+    res = a[1].splitlines(False)
+    print(res)
+
+    if len(res) == 3:
+        res[1] = res[1][3:]
+        medicine = res[1]
+
+        res[2] = res[2][3:]
+        injury = res[2]
+    elif(len(res) == 2):
+        if(res[1][:2] == "P:"):
+            res[1] = res[1][3:]
+            medicine = res[1]
+        elif(res[1][:2] == "N:"):
+            res[2] = res[2][3:]
+            injury = res[2]
+
+
+
+    print(medicine + "sdasd")
+    print(injury + "sdad")
+    if medicine != "":
+        createPrescription(medicine)
+        print("MEDIDID")
+    if injury != "":
+        createDocNote(injury)
+        print("DOCODOCDOC/")
+
 
 
 def GetAiTherapistResp(question):
@@ -137,10 +175,13 @@ def GetAiDoctorResp(question):
     if response.status_code == 200:
         doctor_response = response.json()["choices"][0]["message"]["content"]
         save_interaction(DOCTOR_HISTORY_FILE, question, doctor_response)
+        checkCreateFile(doctor_response)
         return doctor_response
     else:
         print(f"Doctor Error: {response.status_code}")
         return None
+
+
 
 def createPrescription(prescription):
 

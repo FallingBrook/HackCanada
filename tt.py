@@ -1,3 +1,3 @@
-import tensorflow as tf
+import Perplexity as p
 
-print(tf.__version__)
+p.GetAiDoctorResp("I have a terrible leg injury")
