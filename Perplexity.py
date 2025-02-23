@@ -4,7 +4,7 @@ import requests
 import os
 import CreateDoctorFile
 
-API_KEY = "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"
+API_KEY = "ENTER API KEY"
 url = "https://api.perplexity.ai/chat/completions"
 
 # Configuration constants
