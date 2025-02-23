@@ -4,14 +4,14 @@ import requests
 import os
 import CreateDoctorFile
 
-API_KEY = "ENTER API KEY"
+API_KEY = "API KEY HERE"
 url = "https://api.perplexity.ai/chat/completions"
 
 # Configuration constants
 HISTORY_FILE = "therapy_history.txt"
 DOCTOR_HISTORY_FILE = "doctor_history.txt"
 MAX_HISTORY_LENGTH = 5
-CRISIS_KEYWORDS = {"suicide", "kill", "harm", "abuse", "emergency", "help", "helpline"}
+CRISIS_KEYWORDS = {"suicide", "kill", "harm", "abuse", "emergency", "helpline"}
 
 headers = {
     "Authorization": f"Bearer {API_KEY}",
@@ -47,12 +47,13 @@ Crafting your response:
 
 Creating prescription and/or doctors note:
 1. If a prescription is applicable end your message with: "P: (medicine name)" Only suggest one medicine
-2. If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
+2. Next line If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
 3. Before you write the prescription or doctors note write: "***".
 4. Have no space between prescription and medicine
 5. Before the "***" inform them that your are giving them a doctors note or prescription
 6. Use common names for medicines and injuries not medical names unless there is no other name
 7. The doctors note is for the patient to be able to stay home
+8. Only create a doctors note if the patient has a contagious sickness or the injury is severe
 
 Medical conversation history:
 {history}
@@ -99,10 +100,10 @@ def checkCreateFile(text):
     print(res)
 
     if len(res) == 2:
-        res[0] = res[0][3:]
+        res[0] = res[0][2:]
         medicine = res[0]
 
-        res[1] = res[1][3:]
+        res[1] = res[1][2:]
         injury = res[1]
     elif(len(res) == 1):
         if(res[0][:2] == "P:"):

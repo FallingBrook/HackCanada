@@ -25,6 +25,9 @@ def predict_cancer(model, img_array, class_names):
 
 
 def checkForCancer(img_path):
+
+    print("Processing results")
+
     # Load your trained model
     model = load_cancer_model('cancer_classifier.h5')
 
@@ -42,6 +45,5 @@ def checkForCancer(img_path):
     # plt.axis('off')
     # plt.show()
 
-    print(f'Prediction: {prediction}' + f'  Confidence: {confidence:.2%}')
     # Display results
     return f'Prediction: {prediction}' + f'  Confidence: {confidence:.2%}'
