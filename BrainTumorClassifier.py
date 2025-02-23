@@ -13,6 +13,6 @@ def checkForBrainTumor(img_path):
         exist_ok=True,                   # Overwrite existing files/folders
         max_det=1
     )
-    return results[0].save_dir  # Returns the actual save directory used
+    return results[0].path  # Returns the actual save directory used
 
 print(checkForBrainTumor("BrainTumorTestData/tumor.jpg"))
