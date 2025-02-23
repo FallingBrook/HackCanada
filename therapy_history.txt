@@ -1,16 +1,14 @@
-User: my boss sucks i wanna quit
-Therapist: I hear that frustration and dissatisfaction are coming up strongly for you regarding your boss and job situation. It's understandable to feel this way when dealing with a difficult work environment. Before making any big decisions, it can be helpful to explore what's underneath those feelings.
-
-What specific aspects of your boss's behavior or your job are causing you the most distress? How long have you been feeling this way?
-
-It's important to consider your options carefully. Quitting without another job lined up can be risky, but staying in a toxic work environment can also take a toll on your mental health[1]. Let's explore some alternative perspectives:
-
-1. Are there any aspects of your job that you do enjoy or find fulfilling?
-2. Have you tried addressing your concerns with your boss or HR?
-3. How might improving your work-life balance or setting better boundaries help the situation?
-
-Remember, you're a valuable asset with skills and experience. Consider how you might leverage those in your current role or in seeking new opportunities[1]. 
-
-If you're experiencing persistent distress or anxiety related to work, it may be beneficial to speak with a mental health professional who can provide personalized support and coping strategies.
-
-What do you think would be a good first step in addressing this situation?
+User: I am sad because my boss fired me
+Therapist: I hear that you're feeling really sad about being fired. That's totally understandable - losing a job can bring up all kinds of difficult emotions. What do you think is hitting you the hardest about this situation right now? Sometimes when we dig a little deeper, we can start to unpack those feelings and find ways to move forward. Is there anything positive you can take away from this experience, even if it doesn't feel that way in the moment? I know it's tough, but try to be gentle with yourself as you process this. You're going through a big transition and it's okay to have ups and downs. What kind of support do you have around you right now?
+User: I just feel a lot of emotions and my girlfriend just broke up with me. I only have my mother in my life right now but I havent talked to her about these things before.
+Therapist: I'm so sorry you're going through this breakup. It sounds like you're feeling really overwhelmed with emotions right now. That's totally normal after a relationship ends. It's great that you have your mom in your life - even if you haven't opened up to her before about stuff like this, she might be able to offer some comfort. What's the hardest part for you right now? Sometimes just talking it out can help release some of those intense feelings. Is there anything you've found helpful in dealing with difficult emotions in the past?
+User: I just dont think my mom would understand
+Therapist: Oh wow, that's a lot to deal with all at once. Losing your job and going through a breakup at the same time must feel really overwhelming. It's totally understandable if you're feeling all kinds of emotions right now. I'm glad you have your mom in your life - even if you haven't talked to her about personal stuff before, she might surprise you. What's holding you back from opening up to her? Sometimes moms can be more understanding than we expect. And even if she doesn't fully get it, just having someone listen can help take some of the weight off. Is there a small part of what you're going through that you might feel comfortable sharing with her?
+User: I just feel a lot of emotions and my girlfriend just broke up with me. I only have my mother in my life right now but I havent talked to her about these things before.
+Therapist: I hear you - it can be really tough to open up, especially if you're not sure how someone will react. What's the main thing that's worrying you about talking to your mom? Sometimes we build things up in our heads, but taking that first step to share even a little bit can be a huge relief. Is there anyone else you feel comfortable talking to about what you're going through? Remember, you don't have to go through this alone. How are you coping with everything right now?
+User: I just feel a lot of emotions and my girlfriend just broke up with me. I only have my mother in my life right now but I havent talked to her about these things before.
+Therapist: I hear you're feeling really overwhelmed with emotions after this breakup. That's totally normal and it's okay to feel that way. It can be scary to open up to someone new, even your mom. What's the biggest worry holding you back from talking to her? Sometimes just getting those feelings out, even a little bit, can help take some of the weight off your shoulders. Is there a small part you might feel comfortable sharing with her?
+User: I feel like she wouldnt get it because shes really strict. I dont feel comfortable talking to her
+Therapist: I get it, opening up can be really scary, especially if you're not used to it. It's totally normal to feel nervous about talking to your mom about this stuff. What's the main thing that's making you hesitate? Sometimes just taking a small step and sharing a little bit can make a big difference. Is there any part of what you're going through that feels easier to talk about?
+User: I DONT WANT TO TALK TO MY MOM
+Therapist: I hear you, it sounds like you're feeling really hesitant to open up to your mom because of her strict nature. That's totally understandable. When parents are strict, it can make it hard to feel safe sharing vulnerable things. Have you ever been able to talk to her about anything personal before, even if it was small?

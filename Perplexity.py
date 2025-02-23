@@ -22,10 +22,13 @@ headers = {
 THERAPIST_SYSTEM_PROMPT = """You are a compassionate therapist using evidence-based techniques. Follow these guidelines:
 
 1. Validate emotions: "I hear that [emotion] is coming up strongly"
-2. Ask open questions: "What's underneath that feeling?"
+2. Ask targeted questions but only one per response: "What's underneath that feeling?"
 3. Reframe perspectives: "How might this look differently?"
-4. Dont ask too many questions and be conversational
+4. Dont ask more than 1 question
 5. Try to calm the patient down and make them feel better
+6. Dont say too much
+7. Dont structure your message
+8. Write your message in an informal way as if your talking to a friend
 
 Conversation history:
 {history}
@@ -34,17 +37,22 @@ New patient message:"""
 
 DOCTOR_SYSTEM_PROMPT = """You are an AI medical assistant providing general health information. Follow these guidelines:
 
+Crafting your response:
 1. Suggest medecines and prescriptions if applicable
 2. Make sure the medecines and prescriptions are well research and widely known
 2. Suggest consulting a healthcare professional only in severe cases
 3. Provide evidence-based information
 4. Flag emergencies: "This sounds serious - please seek immediate care"
-5. Dont include citations
-6. If a prescription is applicable end your message with: "P: (medicine name)" Only suggest one medicine
-7. If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
-8. Before you write the prescription or doctors note write: "***". Have no space between prescription and medicine
-8. Before the "***" inform them about the doctors note or prescription you are giving them
-9. Use common names for medicines and injuries not medical names unless there is no other name
+5. Dont include citations for example: [1]
+
+Creating prescription and/or doctors note:
+1. If a prescription is applicable end your message with: "P: (medicine name)" Only suggest one medicine
+2. If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
+3. Before you write the prescription or doctors note write: "***".
+4. Have no space between prescription and medicine
+5. Before the "***" inform them that your are giving them a doctors note or prescription
+6. Use common names for medicines and injuries not medical names unless there is no other name
+7. The doctors note is for the patient to be able to stay home
 
 Medical conversation history:
 {history}
@@ -85,7 +93,8 @@ def checkCreateFile(text):
     if(len(text) <= 1):
         return None
     res = text.splitlines(False)
-    res.remove("")
+    print(res)
+    res.remove('')
 
     print(res)
 
@@ -97,11 +106,11 @@ def checkCreateFile(text):
         injury = res[1]
     elif(len(res) == 1):
         if(res[0][:2] == "P:"):
-            res[0] = res[0][3:]
+            res[0] = res[0][2:]
             medicine = res[0]
-        elif(res[1][:2] == "N:"):
-            res[1] = res[1][3:]
-            injury = res[1]
+        elif(res[0][:2] == "N:"):
+            res[0] = res[0][2:]
+            injury = res[0]
 
 
 
@@ -181,7 +190,8 @@ def GetAiDoctorResp(question):
         text = response.json()["choices"][0]["message"]["content"]
         save_interaction(DOCTOR_HISTORY_FILE, question, text)
         doctor_response = text.split("***")
-        checkCreateFile(doctor_response[1])
+        if(len(doctor_response) > 1):
+            checkCreateFile(doctor_response[1])
         return doctor_response[0]
     else:
         print(f"Doctor Error: {response.status_code}")
