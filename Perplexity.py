@@ -11,7 +11,7 @@ url = "https://api.perplexity.ai/chat/completions"
 HISTORY_FILE = "therapy_history.txt"
 DOCTOR_HISTORY_FILE = "doctor_history.txt"
 MAX_HISTORY_LENGTH = 5
-CRISIS_KEYWORDS = {"suicide", "kill", "harm", "abuse", "emergency"}
+CRISIS_KEYWORDS = {"suicide", "kill", "harm", "abuse", "emergency", "help", "helpline"}
 
 headers = {
     "Authorization": f"Bearer {API_KEY}",
