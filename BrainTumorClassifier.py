@@ -16,6 +16,6 @@ def checkForBrainTumor(img_path):
         max_det=1
     )
 
-    return (results[0].save_dir + "/"+ name)  # Returns the actual save directory used
+    return results[0].save_dir + "\\"+ name  # Returns the actual save directory used
 
 print(checkForBrainTumor("BrainTumorTestData/tumor.jpg"))
