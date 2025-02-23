@@ -6,17 +6,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="icon" href="{{ url_for('static', filename='css/images/icon.png') }}" type="image/png">
     <noscript><link rel="stylesheet" href="static/css/noscripts.css" /></noscript>
     <title>Cancer Detection</title>
+    <style>
+        p {
+        color:#FFFFFF;
+        }
+        </style>
+
 </head>
 <body>
 
-<div id="wrapper">
+<div class="container" id="wrapper" >
 
     <!-- Header -->
     <header id="header">
 
-        <h1>Medi AI</h1>
+         <img src="{{ url_for('static', filename='css/images/icon.png') }}" alt="Medi AI Logo" class="logo">
         <p>Your Personal Health Partner</p>
     </header>
 
@@ -34,13 +41,34 @@
         </form>
 
         <!-- Display the result if available -->
+
         {% if confidenceScore %}
             <h3>{{ confidenceScore }}%</h3>
             <h4>Uploaded Image:</h4>
             <img src="{{ image_url }}" alt="Uploaded Image" width="300px">
         {% endif %}
+         </section>
+        <footer id="footer">
 
-        </section>
+            <br>
+            <section>
+                <h2>Contact Us</h2>
+                <dl class="alt">
+                    <dt>Address</dt>
+                    <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+                    <dt>Phone</dt>
+                    <dd>(314) 159-2653 x 5897</dd>
+                    <dt>Email</dt>
+                    <dd><a href="#">hello@medi.help</a></dd>
+                </dl>
+                <ul class="icons">
+                    <li><a href="{{ url_for('static', filename='css/images/x.png') }}" ><span class="label">X</span></a></li>
+                    <li><a href="{{ url_for('static', filename='css/images/Facebook.png') }}" ><span class="label">Facebook</span></a></li>
+                    <li><a href="{{ url_for('static', filename='css/images/ins.png') }}" ><span class="label">Instagram</span></a></li>
+                </ul>
+            </section>
+            <p class="copyright">&copy; MediAI. Design Reference: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
     </div>
 </div>
 

@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="icon" href="{{ url_for('static', filename='css/images/icon.png') }}" type="image/png">
     <noscript><link rel="stylesheet" href="static/css/noscripts.css" /></noscript>
     <title>Simple Input to Python</title>
 
@@ -75,6 +76,9 @@
         button:hover {
             background-color: #0056b3;
         }
+        #headerTxt{
+        color:#FFFFFF;
+        }
     </style>
 
 </head>
@@ -85,8 +89,8 @@
     <!-- Header -->
     <header id="header">
 
-        <h1>Medi AI</h1>
-        <p>Your Personal Health Partner</p>
+        <img src="{{ url_for('static', filename='css/images/icon.png') }}" alt="Medi AI Logo" class="logo">
+        <p id="headerTxt">Your Personal Health Partner</p>
     </header>
 
     <!-- Main -->
@@ -133,82 +137,97 @@
 
         </section>
 
+<script>
+    async function sendToMedi() {
+        const inputText = document.getElementById("demo-message").value;
+        const responseElement = document.getElementById("response");
 
-        <script>
-            async function sendToMedi() {
-                const inputText = document.getElementById("demo-message").value;
+        // Show "AI is processing..."
+        responseElement.innerText = "AI is processing...";
 
-                const response = await fetch("/process_medi", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ text: inputText })
-                });
+        const response = await fetch("/process_medi", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: inputText })
+        });
 
-                const data = await response.json();
-                document.getElementById("response").innerText = data.result;
-            }
+        const data = await response.json();
 
-            async function sendMessage() {
-            const inputField = document.getElementById("user-input");
-            const message = inputField.value.trim();
-            if (message === "") return;
+        // Replace with the actual response
+        responseElement.innerText = data.result;
+    }
 
-            // Display user message
-            displayMessage(message, "user-message");
+    async function sendMessage() {
+        const inputField = document.getElementById("user-input");
+        const chatLog = document.getElementById("chat-log");
+        const message = inputField.value.trim();
+        if (message === "") return;
 
-            // Send user message to Flask backend
-            const response = await fetch("/process_poopy", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: message })
-            });
+        // Display user message
+        displayMessage(message, "user-message");
 
-            const data = await response.json();
-            displayMessage(data.response, "bot-message");
+        // Display "AI is processing..." message
+        const processingMessage = document.createElement("div");
+        processingMessage.className = "message bot-message";
+        processingMessage.innerText = "AI is processing...";
+        chatLog.appendChild(processingMessage);
+        chatLog.scrollTop = chatLog.scrollHeight; // Auto-scroll
 
-            inputField.value = ""; // Clear input field
-        }
+        // Send user message to Flask backend
+        const response = await fetch("/process_poopy", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: message })
+        });
 
-        function displayMessage(text, className) {
-            const chatLog = document.getElementById("chat-log");
-            const messageDiv = document.createElement("div");
-            messageDiv.className = `message ${className}`;
-            messageDiv.innerText = text;
-            chatLog.appendChild(messageDiv);
-            chatLog.scrollTop = chatLog.scrollHeight; // Auto-scroll
-        }
-        </script>
+        const data = await response.json();
+
+        // Remove "AI is processing..." message and show actual AI response
+        chatLog.removeChild(processingMessage);
+        displayMessage(data.response, "bot-message");
+
+        inputField.value = ""; // Clear input field
+    }
+
+    function displayMessage(text, className) {
+        const chatLog = document.getElementById("chat-log");
+        const messageDiv = document.createElement("div");
+        messageDiv.className = `message ${className}`;
+        messageDiv.innerText = text;
+        chatLog.appendChild(messageDiv);
+        chatLog.scrollTop = chatLog.scrollHeight; // Auto-scroll
+    }
+</script>
+
 
 
 
      <!-- Footer -->
         <footer id="footer">
-            <section>
+            <!--<section>
                 <h2>Aliquam sed mauris</h2>
                 <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
                 <ul class="actions">
                     <li><a href="templates/home.html" class="button">Learn More</a></li>
                 </ul>
-            </section>
+            </section>-->
             <section>
-                <h2>Etiam feugiat</h2>
+                <h2>Contact Us</h2>
                 <dl class="alt">
                     <dt>Address</dt>
                     <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
                     <dt>Phone</dt>
-                    <dd>(000) 000-0000 x 0000</dd>
+                    <dd>(314) 159-2653 x 5897</dd>
                     <dt>Email</dt>
-                    <dd><a href="#">information@untitled.tld</a></dd>
+                    <dd><a href="#">hello@medi.help</a></dd>
                 </dl>
                 <ul class="icons">
-                    <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-                    <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+                    <li><a href="{{ url_for('static', filename='css/images/x.png') }}" ><span class="label">X</span></a></li>
+                    <li><a href="{{ url_for('static', filename='css/images/Facebook.png') }}" ><span class="label">Facebook</span></a></li>
+                    <li><a href="{{ url_for('static', filename='css/images/ins.png') }}" ><span class="label">Instagram</span></a></li>
                 </ul>
             </section>
-            <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">&copy; MediAI. Design Reference: <a href="https://html5up.net">HTML5 UP</a>.</p>
         </footer>
     </div>
 </div>
