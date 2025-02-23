@@ -24,7 +24,8 @@ THERAPIST_SYSTEM_PROMPT = """You are a compassionate therapist using evidence-ba
 1. Validate emotions: "I hear that [emotion] is coming up strongly"
 2. Ask open questions: "What's underneath that feeling?"
 3. Reframe perspectives: "How might this look differently?"
-4. Never diagnose - encourage professional care
+4. Dont ask too many questions and be conversational
+5. Try to calm the patient down and make them feel better
 
 Conversation history:
 {history}
@@ -42,6 +43,8 @@ DOCTOR_SYSTEM_PROMPT = """You are an AI medical assistant providing general heal
 6. If a prescription is applicable end your message with: "P: (medicine name)" Only suggest one medicine
 7. If a doctors note is applicable end your message with: "N: (injury)" Only say one injury
 8. Before you write the prescription or doctors note write: "***". Have no space between prescription and medicine
+8. Before the "***" inform them about the doctors note or prescription you are giving them
+9. Use common names for medicines and injuries not medical names unless there is no other name
 
 Medical conversation history:
 {history}

@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7b362d8-aca7-4305-8f70-bff79faa1a2d" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doctor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mediHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mediHome.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tumor.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HackCanada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HackCanada.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BrainTumorClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrainTumorClassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perplexity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Perplexity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor_history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runs/detect/predict/brain-tumor-sample.jpg" beforeDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +38,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FallingBrook&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FallingBrook/HackCanada.git&quot;,
+    &quot;accountId&quot;: &quot;73cedeff-3f95-435b-bcc4-1b16d98ae829&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -37,6 +61,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+<<<<<<< Updated upstream
+=======
+    "Python.BrainTumorClassifier.executor": "Run",
+    "Python.BrainTumorTrainer.executor": "Run",
+>>>>>>> Stashed changes
     "Python.Perplexity.executor": "Run",
     "Python.k.executor": "Run",
     "Python.main.executor": "Run",
@@ -54,12 +83,57 @@
       <recent name="C:\Users\devda\OneDrive\Documents\GitHub\HackCanada\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\PycharmProjects\HackCanada" />
       <recent name="C:\Users\devda\OneDrive\Documents\GitHub\HackCanada\templates" />
       <recent name="C:\Users\devda\OneDrive\Documents\GitHub\HackCanada\static" />
       <recent name="C:\Users\devda\OneDrive\Documents\GitHub\HackCanada" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.BrainTumorClassifier">
+    <configuration name="BrainTumorClassifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HackCanada" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BrainTumorClassifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BrainTumorTrainer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HackCanada" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BrainTumorTrainer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Perplexity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="HackCanada" />
       <option name="ENV_FILES" value="" />
@@ -150,6 +224,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.BrainTumorClassifier" />
+        <item itemvalue="Python.BrainTumorTrainer" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.k" />
